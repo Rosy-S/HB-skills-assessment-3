@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Application Form {% endblock %}
+
+{% block content %}
+	<h1>Application for awesome job</h1>
+	<p> start your application process here. Once you submit your application, your answers will go straight to our database which will then be read by a live human being, probably even me! No bots here...</p>
+	<form action="/application" method="post">
+		<label>First Name: <input type="text" name="firstname"></label><br>
+		<label class="lastname">Last Name: <input type="text" name="lastname"></label><br>
+		<label>Salary Requriement: <input type"text" name="salary"></label><br>
+
+		Select job(s) you are interested in: 
+		<input type="checkbox" name="job" value="QA Engineer">QA Engineer
+		<input type="checkbox" name="job" value="Project Manager">Project Manager
+		<input type="checkbox" name="job" value="Software Engineer">Software Engineer <br>
+		<input type="submit">
+	</form>	
+
+{% endblock %}
